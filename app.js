@@ -20,13 +20,14 @@ const showBtn = document.getElementById('show');
 showBtn.addEventListener('click',()=>{
 
   const cityInput = document.getElementById('city').value;
- 
+
+
 
     weather.get(cityInput).then(data=>{
 
       if(data.message==='city not found'){
 
-       ui.showAlert('City Not Found!','alert alert-danger')
+       ui.showAlert(cityInput,'alert alert-danger font-weight-bold')
 
       }
       else{

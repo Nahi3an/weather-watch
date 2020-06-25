@@ -57,13 +57,13 @@ class UI{
 
   }
 
-  showAlert(msg,className){
+  showAlert(cityName,className){
 
     const div = document.createElement('div');
     
     div.className = className;
 
-    div.appendChild(document.createTextNode(msg));
+    div.appendChild(document.createTextNode(`No City Named ${cityName} Found!`));
     console.log(div);
 
     const parent = document.querySelector('.container');
@@ -75,7 +75,7 @@ class UI{
 
       document.querySelector('.alert').remove();
       
-    },2000)
+    },3000)
 
   }
   

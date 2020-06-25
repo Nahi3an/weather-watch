@@ -7,57 +7,59 @@
   <title>Weather Watch</title>
 </head>
 <body>
- <div class="container bg-primary text-center mt-5 p-5">
-   <div class="header mb-5">
-    <!-- <h1 id="city-country">Header</h1>
-    <h2 id="description">Sub Header</h2>
-    <h2 id="temperature">3rd Header</h2> -->
-  </div>
-   
-  <div class="card mb-4">
-    <ul class="list-group list-group-flush" id="rel-humidity">
-      <!-- <li class="list-group-item" id="feels-like"></li>
-      <li class="list-group-item" id="dew-point"></li>
-      <li class="list-group-item" id="wind"></li> -->
-    </ul>
-  </div>
-
-  <button type="button" class="btn btn-primary border border-success" data-toggle="modal" data-target="#exampleModalCenter">
-   Change Location
-  </button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModalCenter">
-   <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Enter Location</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+ <!-- <div class="container bg-primary text-center mt-5 p-5">
+   <div class="row"> -->
+    <div class="container text-center bg-primary col-md-5 mx-auto mt-5 p-5">
+      <div class="header mb-5 ">
+        <!-- <h1 id="city-country">Header</h1>
+        <h2 id="description">Sub Header</h2>
+        <h2 id="temperature">3rd Header</h2> -->
         </div>
-        <div class="modal-body">
-
-          <form>
-              <div class="form-group">
-                <label for="city">Enter City</label>
-                <input type="text" class="form-control" id="city" placeholder="Enter City">
-              </div>
-
-              <div class="form-group">
-                <label for="country">Email address</label>
-                <input type="email" class="form-control" id ="country" placeholder="country">
-              </div>
-
-              <button type="submit" class="btn btn-primary" data-dismiss="modal">Show Weather</button>
-          </form>
-          
+       
+       <div class="card mb-4">
+        <ul class="list-group list-group-flush">
+          <!-- <li class="list-group-item" id="feels-like"></li>
+          <li class="list-group-item" id="dew-point"></li>
+          <li class="list-group-item" id="wind"></li> -->
+        </ul>
+      </div>
+    
+      <button type="button" class="btn btn-primary border border-success" data-toggle="modal" data-target="#exampleModalCenter">
+       Change Location
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModalCenter">
+       <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Enter Location</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+    
+              <form>
+                  <div class="form-group">
+                    <label for="city">Enter City</label>
+                    <input type="text" class="form-control" id="city" placeholder="Enter City">
+                  </div>
+    
+                  <button type="submit" id="show" class="btn btn-primary" data-dismiss="modal">Show Weather</button>
+              </form>
+              
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-</div>
+    </div>
+
+
+   <!-- </div>
+
+</div> -->
 
  
   

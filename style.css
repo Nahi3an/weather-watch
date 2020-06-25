@@ -1,0 +1,14 @@
+body{
+
+  background: url(./img/anastasia-kozheko-normal.gif);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+
+
+.copyright{
+
+  text-decoration: none;
+}

@@ -10,14 +10,16 @@ class UI{
 
   showHeader(data){
 
+   
     let output;
 
     const [cel,far] = this.convert(data.main.temp,data.main.feels_like);
     
     output = 
-    `<h3>${data.name}, ${data.sys.country}</h3>
-    <h4>${data.weather[0].main}</h4>
-    <h4>${cel} C (${far} F)</h4>
+    `<h3 class='text-light font-weight-bolder'>${data.name}</h3>
+    <h3 class='text-light font-italic'>Country Code: <span class='text-danger'>${data.sys.country}</span> </h3>
+    <h4 class='text-light'>${data.weather[0].main}</h4>
+    <h4 class='text-light'>Temperature: ${cel} C (${far} F)</h4>
     `
       
     this.heading.innerHTML = output;
@@ -40,22 +42,41 @@ class UI{
 
   showCard(data){
  
-    
+    console.log(data)
     const [ , , fCel, fFar] = this.convert(data.main.temp,data.main.feels_like)
-    console.log(fCel);
-    console.log(fFar);
 
     const kmWind = data.wind.speed * 3.6;
   
    
     let output =
-    `<li class="list-group-item">Feels Like: ${fCel} C (${fFar} F)</li>
-    <li class="list-group-item">Humidity: ${data.main.humidity}%</li>
-    <li class="list-group-item">Wind Speed: ${kmWind} km/h</li>`
+    `<li class="list-group-item bg-list font-weight-bolder">Feels Like: ${fCel} C (${fFar} F)</li>
+    <li class="list-group-item bg-list font-weight-bolder">Humidity: ${data.main.humidity}%</li>
+    <li class="list-group-item bg-list font-weight-bolder">Wind Speed: ${kmWind} km/h</li>`
 
     this.card.innerHTML = output;
 
   }
 
+  showAlert(msg,className){
+
+    const div = document.createElement('div');
+    
+    div.className = className;
+
+    div.appendChild(document.createTextNode(msg));
+    console.log(div);
+
+    const parent = document.querySelector('.container');
+    const afterDiv = document.querySelector('.card');
+
+    parent.insertBefore(div,afterDiv);
+
+    setTimeout(function(){
+
+      document.querySelector('.alert').remove();
+      
+    },2000)
+
+  }
   
 }

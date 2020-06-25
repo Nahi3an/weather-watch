@@ -22,12 +22,21 @@ showBtn.addEventListener('click',()=>{
   const cityInput = document.getElementById('city').value;
  
 
-  if(cityInput!==''){
-
     weather.get(cityInput).then(data=>{
 
-      ui.showHeader(data);
-      ui.showCard(data);
+      if(data.message==='city not found'){
+
+       ui.showAlert('City Not Found!','alert alert-danger')
+
+      }
+      else{
+        ui.showHeader(data);
+        ui.showCard(data);
+        
+      }
+     
+    
+     
 
 
     }).catch(err=>{
@@ -36,14 +45,8 @@ showBtn.addEventListener('click',()=>{
 
     })
 
-  }
-  else{
-
-   
+    document.getElementById('city').value = '';
 
 
-  }
-
-
-})
+});
 
